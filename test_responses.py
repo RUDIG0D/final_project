@@ -18,7 +18,7 @@ payloads = [
 for i, payload in enumerate(payloads):
     response = requests.post(url, json=payload)
     try:
-        response.raise_for_status()
+        response.raise_for_status()  # Проверка на успешный статус
         print(f'Response {i+1}:', response.json())
     except requests.exceptions.HTTPError as http_err:
         print(f'HTTP error occurred: {http_err}')
