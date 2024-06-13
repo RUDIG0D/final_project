@@ -16,7 +16,7 @@ def predict():
     args = request.args
     rooms = args.get('rooms', default = -1, type=int)
     area = args.get('area', default = -1, type=float)
-    floor = args.get('renovation', default = -1, type=int)
+    floor = args.get('floor', default = -1, type=int)
     renovation = args.get('renovation', default = -1, type=int)
 
     x = numpy.array([rooms, area, floor, renovation]).reshape(1,-1)
